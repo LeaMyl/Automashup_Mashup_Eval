@@ -1,0 +1,8 @@
+site_name: AutoMashup
+
+nav:
+  - Mashups: index.md
+  - How It Works: explanation.md
+
+theme:
+  name: readthedocs
