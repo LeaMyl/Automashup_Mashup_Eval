@@ -9,12 +9,7 @@ This README summarizes the goal, what was tried (CLAP + MERT + cosine similarity
 ## What we tried (current state)
 
 - CoCoLa: powerful contrastive scores used in earlier experiments (see `Code/cocola.ipynb` and `Code/cocola_scores_calculation.py`). Heavy to run (GPU + checkpoint).
-- CLAP/MERT + cosine similarity: lighter alternative tried in this project. Extract embeddings (CLAP or MERT) per track, optionally average or pool over time/segments, then compute cosine similarity between vocal and instrumental embeddings. This approach is much lighter to run than CoCoLa and gave usable proximity estimates in early experiments.
-
-Notes from the experiments:
-- CLAP/MERT embeddings provide meaningful timbral and semantic cues while being faster to run than a full contrastive training loop.
-- Cosine similarity on pooled embeddings is a simple, fast baseline for pair scoring. Beat-synchronous pooling or per-segment scores often improve musical relevance.
-- For robust results, normalize audio (same sample rate, loudness) and consider removing residual vocals from instrumentals (source separation) if needed.
+- CLAP/MERT + cosine similarity: lighter alternative tried in this project. Extract embeddings (CLAP or MERT) per track, optionally average or pool over time/segments, then compute cosine similarity between vocal and instrumental embeddings. 
 
 ## Files and notebooks
 
@@ -25,4 +20,4 @@ Notes from the experiments:
 
 If you want to reproduce the CLAP/MERT + cosine workflow, check `Code/Embeddings_generation_CLAP_MERT.ipynb` for extraction steps and where embeddings are written.
 
- 
+
