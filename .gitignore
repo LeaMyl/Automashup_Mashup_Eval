@@ -1,0 +1,5 @@
+# ignore the data directory
+data/
+# ignore venv directories
+.venv/
+venv/
